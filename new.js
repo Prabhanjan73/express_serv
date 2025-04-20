@@ -7,7 +7,7 @@ require('dd-trace').init();
 const app = express();
 
 // 3. Choose a port number
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;;
 
 // 4. Define a route for GET requests to the homepage
 app.get('/', (req, res) => {
